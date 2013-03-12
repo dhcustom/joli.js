@@ -153,6 +153,10 @@ var joliCreator = function() {
         } else {
           this.database = Titanium.Database.open(this.dbname);
         }
+        
+        if(this.database.file && this.database.file.remoteBackup){
+        	this.database.file.remoteBackup = false;
+        }
 
         this.database.execute('PRAGMA read_uncommitted=true');
     };
