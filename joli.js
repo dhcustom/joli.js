@@ -127,7 +127,7 @@ var joliCreator = function() {
                     val = val.replace(/'/g, "''");
                     // dollar signs are escaped for use in calling str.replace in
                     // JazzRecord.replaceAndClean()
-                    val = val.replace(/\$/g, "$$$$");
+                    val = val.replace(/\$/g, "$$");
                     val = "'" + val + "'";
                 } else if (joli.getType(val) === "boolean") {
                     if (val) {
